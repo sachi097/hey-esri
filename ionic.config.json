@@ -1,0 +1,7 @@
+{
+  "name": "Hey ESRI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
