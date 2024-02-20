@@ -24,7 +24,7 @@ This project is built using Ionic | Angular | Capacitor.
 
 App is available on 
 - ios devices
-- Web
+- [Web](https://sparkling-banoffee-c32411.netlify.app)
 
 Note: Web version has limitations with speech recognisation hence **Hey ESRI** tab do not work well with web version of the app.
 
