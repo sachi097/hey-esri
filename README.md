@@ -67,6 +67,14 @@ ionic cap run ios --livereload --external
 2. Intigrate Natural Langauage Processing to enhance speech to service abilities. Currently, speech to service works over bunch of pre-defined speech patterns. Hence, NLP will eliminate pre-defined speech patterns.
 3. Enhance user interface and build app for android devices.
 
+## Useful links
+
+- [Base Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html)
+- [Find Places](https://developers.arcgis.com/javascript/latest/tutorials/find-places/)
+- [Reverse Geocoding](https://developers.arcgis.com/javascript/latest/tutorials/reverse-geocode/)
+- [Marker Symbols](https://developers.arcgis.com/javascript/3/samples/portal_symbols/index.html)
+- [ArcGIS Maps SDK for JS](https://developers.arcgis.com/javascript/latest/)
+
 ## Find problems or have suggestions
 
 Please feel free to drop questions, comments and raise issues.
