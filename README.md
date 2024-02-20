@@ -71,3 +71,5 @@ ionic cap run ios --livereload --external
 
 Please feel free to drop questions, comments and raise issues.
 You are welcome to create PRs.
+
+## Please star the repository if you like it
