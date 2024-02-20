@@ -5,7 +5,8 @@ const config: CapacitorConfig = {
   appName: 'Hey ESRI',
   webDir: 'www',
   server: {
-    androidScheme: 'https'
+    androidScheme: 'https',
+    iosScheme: 'https'
   }
 };
 

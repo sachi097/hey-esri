@@ -1,0 +1,41 @@
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+
+.tab-selected ion-icon{
+  color: #ffc409;
+}
+.tab-selected ion-label{
+  color: black;
+  font-weight: bold;
+}
+
+.tab-selected, ion-tab-button{
+  background: #ffc409;
+}
+
+
+#tab-button-tab1,
+#tab-button-tab2,
+#tab-button-tab3{
+  background: white;
+  -webkit-box-shadow: 5px 5px 15px -15px  rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 5px 5px 15px -15px  rgba(0,0,0,0.4);
+  box-shadow: 5px 5px 15px -15px  rgba(0,0,0,0.4);
+}
+
+.custom-button-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.esri-widget .esri-widget--panel {
+    max-height: 50px !important; /**whatever you want here**/
+  }
+
+  

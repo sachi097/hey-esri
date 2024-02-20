@@ -1,0 +1,138 @@
+<ion-content [fullscreen]="true">
+  <div id="viewDiv"></div>
+  <div id="myOwnLocatorButton" class="esri-component esri-widget--button esri-widget" role="button"><span
+      title="locator" id="custom-printer" class="esri-icon esri-icon-locate-circled"></span></div>
+  <ion-modal #directionsModal trigger="openDirectionsModal" [initialBreakpoint]="0.25" [breakpoints]="[0, 0.25]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="ion-no-padding">
+          <ion-item class="ion-no-padding" color="transparent" lines="none">
+            <ion-icon color="primary" name="analytics-sharp"></ion-icon>
+            <ion-label style="margin-left: 10px; color: #3880ff">Directions</ion-label>
+          </ion-item>
+          <ion-buttons slot="end">
+            <ion-button (click)="findDirections()">
+              <ion-label>Go</ion-label>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list lines="full">
+          <ion-item id="openSourceModal">
+            <ion-label>Source: {{source.text}}</ion-label>
+          </ion-item>
+          <ion-item id="openDestinationModal">
+            <ion-label>Destination: {{destination.text}}</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-modal #sourceModal trigger="openSourceModal" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5]">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-title class="ion-no-padding" color="transparent" lines="none">
+                  <ion-label style="color: #3880ff">Source</ion-label>
+                </ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-searchbar placeholder="Source" (ionInput)="sourceQuery(true)" [(ngModel)]="sourceQueryText"
+                show-clear-button="always"></ion-searchbar>
+              <ion-list *ngIf="sourceQueryText.length > 0" class="ion-no-padding">
+                <ion-item lines="full" *ngFor="let sourceSuggestion of sourceSuggestions; trackBy: trackBySuggestion;"
+                  (click)="selectSource(sourceSuggestion)" detail>
+                  <ion-icon name="location-sharp" slot="start" color="primary"></ion-icon>
+                  <ion-label>{{sourceSuggestion.text}}</ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+        <ion-modal #destinationModal trigger="openDestinationModal" [initialBreakpoint]="0.5" [breakpoints]="[0, 0.5]">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-title class="ion-no-padding" color="transparent" lines="none">
+                  <ion-label style="color: #3880ff">Destination</ion-label>
+                </ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-searchbar placeholder="Destination" (ionInput)="destinationQuery(true)"
+                [(ngModel)]="destinationQueryText" show-clear-button="always"></ion-searchbar>
+              <ion-list *ngIf="destinationQueryText.length > 0" class="ion-no-padding">
+                <ion-item lines="full"
+                  *ngFor="let destinationSuggestion of destinationSuggestions; trackBy: trackBySuggestion;"
+                  (click)="selectDestination(destinationSuggestion)" detail>
+                  <ion-icon name="location-sharp" slot="start" color="primary"></ion-icon>
+                  <ion-label>{{destinationSuggestion.text}}</ion-label>
+                </ion-item>
+              </ion-list>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  <ion-modal #navigationModal [initialBreakpoint]="0.35" [breakpoints]="[0, 0.5, 1]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title class="ion-no-padding" color="transparent" lines="none">
+            <ion-label style="color: #3880ff">Navigations</ion-label>
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list class="ion-no-padding">
+          <ion-item lines="full" *ngFor="let navigation of navigations; trackBy: trackByNavigation;">
+            <ion-label>{{navigation.attributes.text + " (" + navigation.attributes.length.toFixed(2) + "
+              miles)"}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  <ion-modal #speechModal trigger="openSpeechModal" [initialBreakpoint]="0.3" [breakpoints]="[0, 0.3]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title class="ion-no-padding" color="transparent" lines="none">
+            <ion-label style="color: #3880ff">Hey ESRI</ion-label>
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-item class="ion-text-center">
+            <ion-label [color]="recording ? 'success' : ''"> {{ recording ? 'Recording your voice' : 'Press recording to record your voice'}}</ion-label>
+        </ion-item>
+        <ion-item class="ion-text-center">
+          <ion-label>{{detectedText}}</ion-label>
+        </ion-item>
+        <ion-fab horizontal="center" style="margin-top: 10px;">
+          <ion-fab-button [color]="recording ? 'danger' : 'success'" (click)="recording ? stopRecorder() : startRecorder()">
+            <ion-icon [name]="recording ? 'stop-circle-sharp' : 'mic-sharp'"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment [scrollable]="true" (ionChange)="segmentOnChange($event)" value="explore">
+      <ion-segment-button value="explore">
+        <ion-icon name="location-sharp" color="primary"></ion-icon>
+        <ion-text color="primary">Explore</ion-text>
+      </ion-segment-button>
+      <ion-segment-button id="openSpeechModal" value="speak">
+        <ion-icon name="mic-sharp" color="primary"></ion-icon>
+        <ion-text color="primary">Hey ESRI</ion-text>
+      </ion-segment-button>
+      <ion-segment-button id="openDirectionsModal" value="directions">
+        <ion-icon name="compass-sharp" color="primary"></ion-icon>
+        <ion-text color="primary">Directions</ion-text>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>
