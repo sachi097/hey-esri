@@ -38,20 +38,24 @@ Note: Web version has limitations with speech recognisation hence **Hey ESRI** t
 - [Capacitor ios](https://capacitorjs.com/docs/ios)
 
 
-2. Clone and Update environment files
+2. Clone repository
 ```
 git clone https://github.com/sachi097/hey-esri.git
-add [arcgis developer](https://developers.arcgis.com/sign-up/) api key in hey-esri/src/environments/environment.ts file and in environments.prod.ts (for production)
 ```
-3. For web
+
+3. Update environment files
+add [arcgis developer](https://developers.arcgis.com/sign-up/) api key in hey-esri/src/environments/environment.ts file and in environments.prod.ts (for production)
+
+4. For web
 ```
 ionic serve
 ```
 
-4. For ios (assuming you have installed xcode and other required enviroments as per step)
+5. For ios (assuming you have installed xcode and other required enviroments as per step)
 ```
 ionic cap run ios --livereload --external
 ```
+
 ## Working Video
 
 (video)[link]
