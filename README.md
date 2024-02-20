@@ -12,6 +12,7 @@ This project is built using Ionic | Angular | Capacitor.
    - Directions: Example - Give Me **Directions** **From** Boulder **To** Denver, Find **Directions** **From** Boulder **To** Denver, Give Me **Direction** **From** Boulder **To** Denver, Find **Direction** **From** Boulder **To** Denver
    - Find nearby places: Example - Find **nearby** food, Find **near by** gas station
    - Navigate to current location: Example  - My **current location**, Show me my **current location**, Give my **current location**
+     
    Note: text in bold must be in your speech in order for speech recognisation agent to serve your request
 4) Directions Tab: Contains directions wizard where user can manually enter source and destionation, and get the directions.
 
