@@ -45,7 +45,7 @@ git clone https://github.com/sachi097/hey-esri.git
 
 3. Update environment files
    
-add [arcgis developer](https://developers.arcgis.com/sign-up/) api key in hey-esri/src/environments/environment.ts file and in environments.prod.ts (for production)
+- add [arcgis developer](https://developers.arcgis.com/sign-up/) api key in hey-esri/src/environments/environment.ts file and in environments.prod.ts (for production)
 
 5. For web
 ```
