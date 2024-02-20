@@ -31,12 +31,12 @@ Note: Web version has limitations with speech recognisation hence **Hey ESRI** t
 ## Running it locally
 
 1. Install required environments
-```
+
 [Ionic environment Setup](https://ionicframework.com/docs/intro/environment)
 [Install Ionic CLI](https://ionicframework.com/docs/intro/cli)
 [Capacitor Environment Setup](https://capacitorjs.com/docs/getting-started/environment-setup)
 [Capacitor ios](https://capacitorjs.com/docs/ios)
-```
+
 
 2. Clone and Update environment files
 ```
