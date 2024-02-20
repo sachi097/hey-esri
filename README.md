@@ -75,7 +75,7 @@ ionic cap run ios --livereload --external
 - [Marker Symbols](https://developers.arcgis.com/javascript/3/samples/portal_symbols/index.html)
 - [ArcGIS Maps SDK for JS](https://developers.arcgis.com/javascript/latest/)
 
-## Find problems or have suggestions
+## Found problems or have suggestions
 
 Please feel free to drop questions, comments and raise issues.
 You are welcome to create PRs.
