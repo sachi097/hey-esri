@@ -70,6 +70,7 @@ ionic cap run ios --livereload --external
 ## Useful links
 
 - [Base Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html)
+- [Widget](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html)
 - [Find Places](https://developers.arcgis.com/javascript/latest/tutorials/find-places/)
 - [Reverse Geocoding](https://developers.arcgis.com/javascript/latest/tutorials/reverse-geocode/)
 - [Marker Symbols](https://developers.arcgis.com/javascript/3/samples/portal_symbols/index.html)
