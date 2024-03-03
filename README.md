@@ -64,7 +64,7 @@ ionic cap run ios --livereload --external
 ## Future Works
 
 1. Include features like current weather, weather predictions, disaster predictions.
-2. Intigrate Natural Langauage Processing to enhance speech to service abilities. Currently, speech to service works over bunch of pre-defined speech patterns. Hence, NLP will eliminate pre-defined speech patterns.
+2. Integrate Natural Language Processing to enhance speech to service abilities. Currently, speech to service works over bunch of pre-defined speech patterns. Hence, NLP will eliminate pre-defined speech patterns.
 3. Enhance user interface and build app for android devices.
 
 ## Useful links
