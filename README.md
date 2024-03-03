@@ -7,14 +7,14 @@ This project is built using Ionic | Angular | Capacitor.
 ## Features
 
 1) Explore Tab: Contains search widget, zoom widget and custom current location button.
-2) Hey ESRI Tab: Contains speech recognisation feature where user can perform below tasks via voice command
+2) Hey ESRI Tab: Contains speech recognition feature where user can perform below tasks via voice command
    - Search location: Example - **Search** Boulder, **Search** Denver, etc.
    - Directions: Example - Give Me **Directions** **From** Boulder **To** Denver, Find **Directions** **From** Boulder **To** Denver, Give Me **Direction** **From** Boulder **To** Denver, Find **Direction** **From** Boulder **To** Denver
    - Find nearby places: Example - Find **nearby** food, Find **near by** gas station
    - Navigate to current location: Example  - My **current location**, Show me my **current location**, Give my **current location**
      
-   Note: text in bold must be in your speech in order for speech recognisation agent to serve your request
-4) Directions Tab: Contains directions wizard where user can manually enter source and destionation, and get the directions.
+   Note: text in bold must be in your speech in order for speech recognition agent to serve your request
+4) Directions Tab: Contains directions wizard where user can manually enter source and destination, and get the directions.
 
 - Current location of the user is diplayed on the map with pin icon, user can click on the pin to get current address and longitude-latitude details.
 - When the route is displayed on the map for directions service, user can click on the source/destination to get step-by-step navigations.
@@ -26,7 +26,7 @@ App is available on
 - ios devices
 - [Web](https://sparkling-banoffee-c32411.netlify.app)
 
-Note: Web version has limitations with speech recognisation hence **Hey ESRI** tab do not work well with web version of the app.
+Note: Web version has limitations with speech recognition hence **Hey ESRI** tab do not work well with web version of the app.
 
 ## Running it locally
 
