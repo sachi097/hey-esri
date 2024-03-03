@@ -46,7 +46,6 @@ export class HomePage implements OnInit {
   private zoomWidget: Zoom = new Zoom;
   private locatorWidget: HTMLElement | null = null;
   private searchWidget: Search = new Search;
-  private directionsWidget: Directions = new Directions;
   private currentLocation: Point = new Point;
   private apiKey = environment.apiKey;
   private geoCodeUrl = "http://geocode-api.arcgis.com/arcgis/rest/services/World/GeocodeServer?f=json&token=" + this.apiKey;
