@@ -8,7 +8,6 @@ import FeatureSet from '@arcgis/core/rest/support/FeatureSet';
 import RouteParameters from '@arcgis/core/rest/support/RouteParameters';
 import Widget from '@arcgis/core/widgets/Widget';
 import RouteLayer from '@arcgis/core/layers/RouteLayer';
-import Directions from '@arcgis/core/widgets/Directions';
 import Search from '@arcgis/core/widgets/Search';
 import esriConfig from '@arcgis/core/config';
 import Graphic from '@arcgis/core/Graphic';

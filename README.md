@@ -16,7 +16,7 @@ This project is built using Ionic | Angular | Capacitor.
    Note: text in bold must be in your speech in order for speech recognition agent to serve your request
 4) Directions Tab: Contains directions wizard where user can manually enter source and destination, and get the directions.
 
-- Current location of the user is diplayed on the map with pin icon, user can click on the pin to get current address and longitude-latitude details.
+- Current location of the user is displayed on the map with pin icon, user can click on the pin to get current address and longitude-latitude details.
 - When the route is displayed on the map for directions service, user can click on the source/destination to get step-by-step navigations.
 - On getting results for nearby places, user can click on each places to get the address.
 
@@ -45,7 +45,7 @@ git clone https://github.com/sachi097/hey-esri.git
 
 3. Update environment files
    
-- add [arcgis developer](https://developers.arcgis.com/sign-up/) api key in hey-esri/src/environments/environment.ts file and in environments.prod.ts (for production)
+- add [ArcGIS Developers](https://developers.arcgis.com/sign-up/) api key in hey-esri/src/environments/environment.ts file and in environments.prod.ts (for production)
 
 5. For web
 ```
@@ -69,12 +69,15 @@ ionic cap run ios --livereload --external
 
 ## Useful links
 
-- [Base Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html)
-- [Widget](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html)
-- [Find Places](https://developers.arcgis.com/javascript/latest/tutorials/find-places/)
-- [Reverse Geocoding](https://developers.arcgis.com/javascript/latest/tutorials/reverse-geocode/)
-- [Marker Symbols](https://developers.arcgis.com/javascript/3/samples/portal_symbols/index.html)
-- [ArcGIS Maps SDK for JS](https://developers.arcgis.com/javascript/latest/)
+- [Map](https://developers.arcgis.com/javascript/latest/api-reference/esri-Map.html) - Class to create map instance with base map.
+- [Basemap](https://developers.arcgis.com/javascript/latest/api-reference/esri-Basemap.html) - A basemap is a collection of layers that provide geographic context to a map or scene.
+- [⁠MapView](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-MapView.html) - A MapView displays a 2D view of a Map instance.
+- [Widget](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Widget.html) - To add show search, zoom and locator widgets on the map. 
+- [Find Places](https://developers.arcgis.com/javascript/latest/tutorials/find-places/) - To find nearby places ex: food, gas station, coffee shop, hotel, and etc.
+- [Reverse Geocoding](https://developers.arcgis.com/javascript/latest/tutorials/reverse-geocode/) - To convert point [longitude, latitude] to address or place.
+- [MarkerSymbol](https://developers.arcgis.com/javascript/latest/api-reference/esri-symbols-MarkerSymbol.html) - Used to draw Point graphics in a FeatureLayer or individual graphics in a 2D MapView.
+- [MarkerSymbol Samples](https://developers.arcgis.com/javascript/3/samples/portal_symbols/index.html) -  Portal to explore available ESRI marker symbols.
+- [ArcGIS Maps SDK for JS](https://developers.arcgis.com/javascript/latest/) - ArcGIS API for JavaScript, is a developer product for building mapping and spatial analysis applications for the web.
 
 ## Found problems or have suggestions
 
