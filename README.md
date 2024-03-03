@@ -10,7 +10,7 @@ This project is built using Ionic | Angular | Capacitor.
 2) Hey ESRI Tab: Contains speech recognition feature where user can perform below tasks via voice command
    - Search location: Example - **Search** Boulder, **Search** Denver, etc.
    - Directions: Example - Give Me **Directions** **From** Boulder **To** Denver, Find **Directions** **From** Boulder **To** Denver, Give Me **Direction** **From** Boulder **To** Denver, Find **Direction** **From** Boulder **To** Denver
-   - Find nearby places: Example - Find **nearby** food, Find **near by** gas station
+   - Find nearby places: Example - Find **nearby** food, Find **nearby** gas station
    - Navigate to current location: Example  - My **current location**, Show me my **current location**, Give my **current location**
      
    Note: text in bold must be in your speech in order for speech recognition agent to serve your request
