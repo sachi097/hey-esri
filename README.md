@@ -59,7 +59,7 @@ ionic cap run ios --livereload --external
 
 ## Working Video
 
-(video)[link]
+(Demo)[https://youtu.be/-tLXjn2hBHU]
 
 ## Future Works
 
